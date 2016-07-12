@@ -5,13 +5,14 @@
   "cordova": {
     "id": "cordova-add-contact",
     "platforms": [
-      "android"
+      "android",
+      "ios"
     ]
   },
   "keywords": [
     "ecosystem:cordova",
     "cordova-android",
-    "cordova-ios",
+    "cordova-ios"
   ],
   "license": "MIT",
   "repository": {
@@ -22,5 +23,5 @@
     "url": "https://github.com/jpfperondini/cordova-add-contact/issues"
   },
   "homepage": "https://github.com/jpfperondini/cordova-add-contact#readme",
-  "author": ""
+  "author": "João Pedro Perondini <jpfperondini@gmail.com>"
 }
