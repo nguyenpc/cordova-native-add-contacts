@@ -1,6 +1,6 @@
 {
   "name": "cordova-add-contact",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Cordova Add Contact Plugin",
   "cordova": {
     "id": "cordova-add-contact",
