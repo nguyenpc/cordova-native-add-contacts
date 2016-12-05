@@ -6,7 +6,8 @@ var app = {
         document.getElementById('button').addEventListener('click', this.buttonClicked, false);
     },
     buttonClicked: function() {
-        window.cordova.plugins.cordovaAddContact.addContact()
+        window.cordova.plugins.cordovaAddContact.
+            addContact({phone: '+123456789', name:'John', email:'john@john.com'})
     },
 };
 
