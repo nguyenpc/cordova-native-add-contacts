@@ -11,13 +11,12 @@
             <param name="onload" value="true"/></feature>
         </config-file>
         <config-file parent="/*" target="AndroidManifest.xml"/>
-        <source-file src="src/android/CordovaNativeContacts.java" target-dir="src/cordova/plugin/contact/"/>
+        <source-file src="src/android/CordovaNativeContacts.java" target-dir="src/cordova/plugin/contact"/>
     </platform>
     <platform name="ios">
         <config-file parent="/*" target="config.xml">
             <feature name="CordovaNativeContacts"><param name="ios-package" value="CordovaNativeContacts"/></feature>
         </config-file>
-add
         <header-file src="src/ios/cordova-native-contacts.h" />
         <source-file src="src/ios/cordova-native-contacts.m"/>
 

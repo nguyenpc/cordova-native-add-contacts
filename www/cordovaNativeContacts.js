@@ -1,22 +1,24 @@
 var exec = require('cordova/exec');
 
-const emptyCallback = function() {}
+const emptyCallback = function () { }
 
-exports.addContact = function(params) {
-    if(typeof params == 'undefined') {
-        params = {}
-    }
+const nativeContacts = {}
 
-    if(typeof params.name == 'undefined' || params.name == null) {
-        params.name = ''
-    }
+nativeContacts.addContact = function (params) {
+  if (typeof params == 'undefined') {
+    params = {}
+  }
 
-    if(typeof params.email == 'undefined' || params.email == null) {
-        params.email = ''
-    }
-
-    if(typeof params.phone == 'undefined' || params.phone == null) {
-        params.phone = ''
-    }
-    exec(emptyCallback, emptyCallback, "CordovaNativeContacts", "addContact", [params]);
+  exec(emptyCallback, emptyCallback, "CordovaNativeContacts", "addContact", [params]);
 };
+
+nativeContacts.updateContact = function (params) {
+  if (typeof params == 'undefined') {
+    params = {}
+  }
+
+  exec(emptyCallback, emptyCallback, "CordovaNativeContacts", "updateContact", [params]);
+}
+
+module.exports = nativeContacts;
+
