@@ -1,22 +1,25 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="cordova-add-contact" version="0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
-    <name>cordova-add-contact</name>
-    <js-module name="cordova-add-contact" src="www/cordovaAddContact.js">
-      <clobbers target="cordova.plugins.cordovaAddContact"/>
+<plugin id="cordova-native-contacts" version="0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>cordova-native-contacts</name>
+    <js-module name="cordova-native-contacts" src="www/cordovaNativeContacts.js">
+      <clobbers target="cordova.plugins.CordovaNativeContacts"/>
     </js-module>
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
-            <feature name="CordovaAddContact"><param name="android-package" value="cordova.plugin.contact.add.CordovaAddContact"/><param name="onload" value="true"/></feature>
-        </config-file><config-file parent="/*" target="AndroidManifest.xml"/>
-        <source-file src="src/android/CordovaAddContact.java" target-dir="src/cordova/plugin/contact/add"/>
+            <feature name="CordovaNativeContacts">
+            <param name="android-package" value="cordova.plugin.contact.CordovaNativeContacts"/>
+            <param name="onload" value="true"/></feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml"/>
+        <source-file src="src/android/CordovaNativeContacts.java" target-dir="src/cordova/plugin/contact/"/>
     </platform>
     <platform name="ios">
         <config-file parent="/*" target="config.xml">
-            <feature name="CordovaAddContact"><param name="ios-package" value="CordovaAddContact"/></feature>
+            <feature name="CordovaNativeContacts"><param name="ios-package" value="CordovaNativeContacts"/></feature>
         </config-file>
-
-        <header-file src="src/ios/cordova-add-contact.h" />
-        <source-file src="src/ios/cordova-add-contact.m"/>
+add
+        <header-file src="src/ios/cordova-native-contacts.h" />
+        <source-file src="src/ios/cordova-native-contacts.m"/>
 
         <framework src="Contacts.framework" />
         <framework src="ContactsUI.framework" />

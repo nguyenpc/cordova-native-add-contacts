@@ -1,9 +1,9 @@
 /********* cordova-add-contact.m Cordova Plugin Implementation *******/
 
 #import <Cordova/CDV.h>
-#import "cordova-add-contact.h"
+#import "cordova-native-contacts.h"
 
-@implementation CordovaAddContact
+@implementation CordovaNativeContacts
 
 - (void)addContact:(CDVInvokedUrlCommand*)command
 {

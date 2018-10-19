@@ -1,4 +1,3 @@
-cordova.define("cordova-add-contact.cordova-add-contact", function(require, exports, module) {
 var exec = require('cordova/exec');
 
 const emptyCallback = function() {}
@@ -19,7 +18,5 @@ exports.addContact = function(params) {
     if(typeof params.phone == 'undefined' || params.phone == null) {
         params.phone = ''
     }
-    exec(emptyCallback, emptyCallback, "CordovaAddContact", "addContact", [params]);
+    exec(emptyCallback, emptyCallback, "CordovaNativeContacts", "addContact", [params]);
 };
-
-});

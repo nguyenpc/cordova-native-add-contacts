@@ -5,7 +5,7 @@
 #import <Contacts/Contacts.h>
 #import <ContactsUI/ContactsUI.h>
 
-@interface CordovaAddContact : CDVPlugin <CNContactViewControllerDelegate, UINavigationControllerDelegate>
+@interface CordovaNativeContacts : CDVPlugin <CNContactViewControllerDelegate, UINavigationControllerDelegate>
 
 @property (nonatomic , strong) CNContactViewController *addContactVC;
 @property (strong, nonatomic) UINavigationController *navController;
